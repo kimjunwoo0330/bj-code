@@ -1,2 +1,3 @@
-data=["80","70","20"]
-print(sorted(data,reverse=True))
+visited=[[False]*4 for _ in range(6)]
+visited[0][3]=True
+print(visited)
