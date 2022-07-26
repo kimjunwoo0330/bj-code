@@ -1,3 +1,6 @@
-visited=[[False]*4 for _ in range(6)]
-visited[0][3]=True
-print(visited)
+n=1
+for i in range(2):
+    if n==1:
+        print(1)
+        continue
+        print(3)
