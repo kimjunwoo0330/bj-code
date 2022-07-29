@@ -18,20 +18,17 @@ def bfs(z,x,y):
     while que:
         z,y,x=que.popleft()
         visited[z][y][x]=True
-        for i in range(len(dx)):
-            kx=x+dx[i]
-            ky=y+dy[i]
-            kz=z+dz[i]
-            if kx < 0 or kz <0 or ky < 0 or kz >= h or ky >= n or kx >= m:
-                continue
-            if graph[kz][ky][kx]==-1:
-                visited[kz][ky][kx]=True
-                continue
-            if not visited[kz][ky][kx]:
-                if graph[z][y][x]==1:
-                    graph[kz][ky][kx] = graph[z][y][x]+1
-                    print(graph[kz][ky][kx])
-                    que.append((kz,ky,kx))
+        if graph[z][y][x]==1:
+            for i in range(len(dx)):
+                kx=x+dx[i]
+                ky=y+dy[i]
+                kz=z+dz[i]
+                if kx < 0 or kz <0 or ky < 0 or kz >= h or ky >= n or kx >= m:
+                    continue
+                if graph[kz][ky][kx]==-1:
+                    visited[kz][ky][kx]=True
+                    continue
+                
    
 print(graph[1][1][2])
 bfs(1,1,2)

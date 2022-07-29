@@ -3,12 +3,14 @@ from collections import deque
 n,m=map(int,sys.stdin.readline().split())
 graph=[]
 que=deque()
+
 for i in range(m):
     array1=list(map(int,sys.stdin.readline().split()))
     graph.append(array1)
     for i2 in range(len(array1)):
         if array1[i2]==1:
             que.append([i,i2])
+            
 dx=[0,0,1,-1]
 dy=[1,-1,0,0]
 
