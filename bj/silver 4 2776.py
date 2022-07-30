@@ -1,7 +1,7 @@
 import sys
 input = sys.stdin.readline
 
-def de(array,target,start,end):
+def de(array,target,start,end): #이분 탐색
     while start <= end:
         mid =(start+end)//2
         if array[mid]==target:
